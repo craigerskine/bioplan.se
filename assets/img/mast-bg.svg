@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="370" viewBox="0 0 20 370" role="img">
+  <defs>
+    <linearGradient id="mast-bg" x1="50%" x2="50%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#29285D" stop-opacity="0"/>
+      <stop offset="32.526%" stop-color="#443E7E" stop-opacity=".75"/>
+      <stop offset="65.448%" stop-color="#FE74A8"/>
+      <stop offset="100%" stop-color="#FE74A8"/>
+    </linearGradient>
+  </defs>
+  <rect width="20" height="370" fill="url(#mast-bg)" fill-rule="evenodd" />
+</svg>
