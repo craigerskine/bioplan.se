@@ -37,7 +37,7 @@
       </header>
       <main class="w-full">
         <section>
-          <h1 class="cta mx-auto py-16 px-4 max-w-3xl text(purple-600 xl center) md:(text-4xl leading-loose)">
+          <h1 class="cta mx-auto py-4 px-4 max-w-3xl text(purple-600 xl center) leading-normal md:(py-16 text-4xl leading-loose)">
             bioplan is a <strong>prog metal</strong> band infused with <strong>punk</strong> and <strong>80s hard rock</strong>... plus tons of thunderous guitar in <strong>drop D#</strong>
           </h1>
         </section>
@@ -48,22 +48,24 @@
               <b class="mt-4 mx-auto w-full max-w-xs h-1 bg-gray-800 block"></b>
             </a>
           </h2>
-          <ul class="list-none lg:flex flex-wrap">
-            <li class="p-10 pt-5 pb-8 relative md:(mx-0) lg:(w-1/3)" v-for="item in news">
-              <a @click.prevent href="#" class="text-white group">
-                <h3 class="article-title text-blue-500 text-xl transition group-hover:(text-blue-300)">{{ item.title }}</h3>
-                <small class="article-date mb-1 py-1 block opacity-50">{{ item.date }}</small>
-                <p class="article-excerpt">
-                  {{ item.intro }}
-                  <b class="article-arrow text-red-400 group-hover:text-red-200 text-right block transition">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" role="img" class="fill-current float-right">
-                      <polygon points="9.302 1.095 17.424 9.226 0 9.226 0 10.774 17.424 10.774 9.302 18.905 10.396 20 20 10.386 20 9.613 10.396 0"/>
-                    </svg>                  
-                  </b>
-                </p>
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" role="img" class="text-blue-500 opacity-25 fill-current absolute top-0 left-0">
-                  <path d="M40,20 L35,20 C35,11.7157288 28.2842712,5 20,5 C11.7157288,5 5,11.7157288 5,20 L0,20 C0,8.954305 8.954305,0 20,0 C31.045695,0 40,8.954305 40,20 Z M0.400072462,24 L5.53923272,24 C7.28972301,30.342374 13.1009381,35 20,35 L20,40 C10.3241684,40 2.2531538,33.1289613 0.400072462,24 Z"/>
-                </svg>
+          <ul class="mx-auto max-w-md lg:(mx-0 max-w-full flex flex-wrap)">
+            <li v-for="item in news" class="md:(mx-0) lg:(w-1/3)">
+              <a @click.prevent href="#" class="group px-4 text-white block">
+                <div class="p-10 relative transform transition group-hover:(-translate-y-3)">
+                  <h3 class="article-title text-blue-500 text-xl transition group-hover:(text-blue-300)">{{ item.title }}</h3>
+                  <small class="article-date mb-1 py-1 block opacity-50">{{ item.date }}</small>
+                  <p class="article-excerpt">
+                    {{ item.intro }}
+                    <b class="article-arrow text-red-400 group-hover:text-red-200 text-right block transition">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" role="img" class="fill-current float-right">
+                        <polygon points="9.302 1.095 17.424 9.226 0 9.226 0 10.774 17.424 10.774 9.302 18.905 10.396 20 20 10.386 20 9.613 10.396 0"/>
+                      </svg>                  
+                    </b>
+                  </p>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" role="img" class="text-blue-500 opacity-25 fill-current absolute top-4 left-3">
+                    <path d="M40,20 L35,20 C35,11.7157288 28.2842712,5 20,5 C11.7157288,5 5,11.7157288 5,20 L0,20 C0,8.954305 8.954305,0 20,0 C31.045695,0 40,8.954305 40,20 Z M0.400072462,24 L5.53923272,24 C7.28972301,30.342374 13.1009381,35 20,35 L20,40 C10.3241684,40 2.2531538,33.1289613 0.400072462,24 Z"/>
+                  </svg>
+                </div>
               </a>
             </li>
           </ul>
