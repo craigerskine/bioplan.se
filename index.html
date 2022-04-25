@@ -12,12 +12,12 @@
   <body>
 
     <div class="app min-h-screen flex flex-col">
-      <header class="w-full bg-top bg-repeat-x bg-fixed text-center" style="background-image: url(assets/img/mast-stars.png)">
+      <header class="w-full bg-top bg-repeat-x text-center animate-bg_stars" style="background-image: url(assets/img/mast-stars.png)">
         <div class="mast pt-12 bg-bottom bg-repeat-x" style="background-image: url(assets/img/mast-bg.svg)">
           <div class="alert pt-6 text-2xl text-white"><p><strong class="text-pink-600">Ocular</strong>... out now!</p></div>
           <h3 class="mast-details px-4 pb-16 md:pb-0 bg-bottom bg-repeat-x relative animate-bg_mountains" style="background-image: url(assets/img/mast-mountains.svg)">
             <img src="assets/img/mast-logo.png" alt="bioplan" class="mast-logo mx-auto block animate-float" />
-            <div class="mast-trees h-[120px] bg-bottom bg-repeat-x absolute bottom-0 inset-x-0 animate-bg_trees" style="background-image: url(assets/img/mast-trees.png)"></div>
+            <div class="mast-trees h-[120px] bg-bottom bg-repeat-x absolute bottom-0 inset-x-0" style="background-image: url(assets/img/mast-trees.png)"></div>
           </h3>
         </div>
         <nav class="absolute top-0 inset-x-0">
@@ -168,6 +168,10 @@
               sans: 'Comfortaa,'+ theme('fontFamily.sans'),
             }),
             keyframes: {
+              bg_stars: {
+                '0%': { 'background-position': '0 0' },
+                '100%': { 'background-position': '882px 0' },
+              },
               bg_mountains: {
                 '0%': { 'background-position': '0 100%' },
                 '100%': { 'background-position': '-879px 100%' },
@@ -182,6 +186,7 @@
               },
             },
             animation: {
+              bg_stars: 'bg_stars 120s linear infinite',
               bg_mountains: 'bg_mountains 45s linear infinite',
               bg_trees: 'bg_trees 30s linear infinite',
               float: 'float 2s ease-in-out alternate infinite',
