@@ -89,8 +89,8 @@
             </a>
             <ul class="mb-8 flex justify-center md:justify-end">
               <li class="mx-1 md:mx-0 md:ml-2" v-for="soc in social">
-                <a @click.prevent href="#" class="group" :title="'Listen on '+ soc">
-                  <i :class="'fa-brands fa-'+ soc +' fa-fw text-5xl transition group-hover:(text-white)'"></i>
+                <a :href="soc.url" class="group" :title="'Listen on '+ soc.title">
+                  <i :class="'fa-brands fa-'+ soc.ico +' fa-fw text-5xl transition group-hover:(text-white)'"></i>
                 </a>
               </li>
             </ul>
@@ -113,7 +113,11 @@
         data() {
           return {
             nav: ['about', 'news', 'tour', 'music'],
-            social: ['spotify', 'apple', 'google-play', 'amazon', 'youtube'],
+            social: [
+              { title: 'Spotify', url: 'https://open.spotify.com/artist/6F0ffDW1Yoo31v0oe4OeWB?si=916lTucpRWicAi4yb-M3Sg', ico: 'spotify', },
+              { title: 'Apple Music', url: 'https://music.apple.com/us/artist/bioplan/1455933802', ico: 'apple', },
+              { title: 'Youtube Music', url: 'https://music.youtube.com/channel/UCR-WIVYp6rNeOUkdWu2mBBg', ico: 'youtube', },
+            ],
             news: [
               {
                 title: '2019 Tour',
